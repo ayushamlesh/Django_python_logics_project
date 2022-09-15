@@ -1,26 +1,30 @@
 # created by me - -
 # yaha pr logic of python likh rahe hai
+from ast import Return
 from django.http import HttpResponse
 from django.shortcuts import render
 
 
 def index(request):
+    return render(request, 'index.html')
 
-    return HttpResponse('index.html')
+
+def forms(request):
+    return render(request, 'form.html')
 
 
-def index2(request):
+def calculate_ride(request):
     age = request.GET.get('age')
-    allow={}
-    if age!="":
+    name = request.GET.get('game')
+    allow = {}
+    if age == "":
+        allow = {"a": "give valid input", "game_name": name}
+        return render(request, 'ans.html', allow)
+    if age != "":
         age = int(age)
-    elif age== "":
-        allow = {"a": "give valid input"}
-        return render(request, 'sum.html', allow)
-    elif (age>60 or age < 15):
+    if (age > 60 or age < 15):
         allow = {"a": "not allowed"}
-        return render(request, 'sum.html', allow)
-    elif (age<=60 and age >= 15):
-        allow={"a":"allowed"}
-        return render(request, 'sum.html', allow)
-
+        return render(request, 'ans.html', allow)
+    elif (age <= 60 and age >= 15):
+        allow = {"a": "allowed", "game_name": name}
+        return render(request, 'ans.html', allow)

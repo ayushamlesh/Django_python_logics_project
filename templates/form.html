@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    background-image: linear-gradient(45deg, #7175da, #9790F2);
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    /* align-items:  center; */
+    /* justify-content: left; */
+    flex-direction: column;
+    min-height: 90vh;
+    margin: 2;
+  }
+  
+  .courses-container{
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .course {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: relative;
+    max-width: 45%;
+    margin: 20px;
+    overflow: hidden;
+    width: 700px;
+  }
+  
+  
+  .course h2 {
+    letter-spacing: .5px;
+    margin: 2px 0;
+  }
+  
+  .course-preview {
+    background-color: #2A265F;
+    color: #fff;
+    padding: 30px;
+    max-width: 15px;
+  }
+  
+  
+  
+  .course-info {
+    padding: 10px;
+    position: relative;
+    width: 100%;
+  }
+  
+  
+  
+  .btn {
+    background-color: #2A265F;
+    border: 0;
+    border-radius: 90px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 13px;
+    right: 5px;
+    letter-spacing: 1px;
+  }
+  .btn:hover {
+    background-color: #ffffff;
+    color: #001F61;
+  }
+  
+    </style>
+</head>
+<body style="font-size:20px;">
+<div class="courses-container">
+  <div class="course">
+    <div class="course-preview">
+    </div>
+    <div class="course-info">
+      <h2>Enter Age</h2>
+      <div class="progress-container">
+       <form action="ans" method="get">
+        <input type="text" class="form-control" name="age"  placeholder="Enter age" autocomplete="off">
+        <br>
+         <button type="submit" class="btn btn-primary" name="game" value="Allowed on ride or not">Submit</button>
+        </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
